@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<suite name="OpenCartTestNG Regression Suite" verbose="3" parallel="tests"
+	thread-count="3">
+
+	<!--type ctrl+shift+/ for comment  and ctrl+shift+\ for uncomment-->
+
+<listeners>
+		<listener
+			class-name="com.qa.opencart.listeners.ExtentReportListener" />
+		<listener
+			class-name="com.qa.opencart.listeners.AnnotationTransformer" />
+
+	</listeners>
+
+	<test name="LoginPageTest">
+		<classes>
+			<class name="com.qa.opencart.tests.LoginPageTest" />
+			<parameter name="browser" value="chrome" />
+		</classes>
+	</test>
+
+<!-- starts from testng>> loginpagetest class>> Baseclass>>initProp, intDriver,>> Optionsmanager read from config.prop.>> launch browser>
+
+
+
+<!	<test name="AcoountPageTest">
+		<classes>
+			<class name="com.qa.opencart.tests.AccountPageTest" />
+
+		</classes>
+	</test>
+
+
+	<test name="ProductInfoPageTest">
+		<classes>
+			<class name="com.qa.opencart.tests.ProductInfoPageTest" />
+
+		</classes>
+	</test>-->
+
+
+<!--	<test name="RegisterPageTest">
+		<classes>
+			<class name="com.qa.opencart.tests.RegisterPageTest" />
+			<parameter name="browser" value="chrome" />
+		</classes>
+	</test>-->
+
+
+</suite>
