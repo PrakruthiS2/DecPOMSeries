@@ -1,6 +1,10 @@
 package com.qa.opencart.tests;
 
 import org.testng.Assert;
+<<<<<<< HEAD
+=======
+import org.testng.annotations.Listeners;
+>>>>>>> 3f3b5208ea33332ed5ab827393f13f6e2d30704c
 import org.testng.annotations.Test;
 
 import com.qa.opencart.base.BaseTest;
@@ -8,6 +12,12 @@ import com.qa.opencart.constants.AppConstant;
 import com.qa.opencart.errors.AppError;
 import com.qa.opencart.pages.AccountsPage;
 
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> 3f3b5208ea33332ed5ab827393f13f6e2d30704c
 public class LoginPageTest extends BaseTest {
 	
 	

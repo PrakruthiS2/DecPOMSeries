@@ -5,6 +5,10 @@ import java.util.Properties;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
+<<<<<<< HEAD
+=======
+import org.testng.annotations.Optional;
+>>>>>>> 3f3b5208ea33332ed5ab827393f13f6e2d30704c
 import org.testng.annotations.Parameters;
 import org.testng.asserts.SoftAssert;
 
@@ -41,7 +45,11 @@ public class BaseTest {
 
 	@Parameters({"browser"})
 	@BeforeTest
+<<<<<<< HEAD
 	public void setUp(String browserName) {
+=======
+	public void setUp(@Optional("chrome") String browserName) {
+>>>>>>> 3f3b5208ea33332ed5ab827393f13f6e2d30704c
 		df = new DriverFactory();
 		prop = df.initProp();
 		if (browserName != null) {

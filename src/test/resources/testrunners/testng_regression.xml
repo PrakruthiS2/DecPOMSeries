@@ -6,16 +6,36 @@
 
 	<!--type ctrl+shift+/ for comment  and ctrl+shift+\ for uncomment-->
 
+<<<<<<< HEAD
 
 <!--	<test name="LoginPageTest">
+=======
+<listeners>
+		<listener
+			class-name="com.qa.opencart.listeners.ExtentReportListener" />
+		<listener
+			class-name="com.qa.opencart.listeners.AnnotationTransformer" />
+
+	</listeners>
+
+	<test name="LoginPageTest">
+>>>>>>> 3f3b5208ea33332ed5ab827393f13f6e2d30704c
 		<classes>
 			<class name="com.qa.opencart.tests.LoginPageTest" />
 			<parameter name="browser" value="chrome" />
 		</classes>
 	</test>
 
+<<<<<<< HEAD
 
 	<test name="AcoountPageTest">
+=======
+<!-- starts from testng>> loginpagetest class>> Baseclass>>initProp, intDriver,>> Optionsmanager read from config.prop.>> launch browser>
+
+
+
+<!	<test name="AcoountPageTest">
+>>>>>>> 3f3b5208ea33332ed5ab827393f13f6e2d30704c
 		<classes>
 			<class name="com.qa.opencart.tests.AccountPageTest" />
 
@@ -28,15 +48,26 @@
 			<class name="com.qa.opencart.tests.ProductInfoPageTest" />
 
 		</classes>
+<<<<<<< HEAD
 	</test>
 -->
 
 	<test name="RegisterPageTest">
+=======
+	</test>-->
+
+
+<!--	<test name="RegisterPageTest">
+>>>>>>> 3f3b5208ea33332ed5ab827393f13f6e2d30704c
 		<classes>
 			<class name="com.qa.opencart.tests.RegisterPageTest" />
 			<parameter name="browser" value="chrome" />
 		</classes>
+<<<<<<< HEAD
 	</test>
+=======
+	</test>-->
+>>>>>>> 3f3b5208ea33332ed5ab827393f13f6e2d30704c
 
 
 </suite>

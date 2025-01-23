@@ -21,6 +21,10 @@ import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.qa.opencart.exceptions.ElementException;
+<<<<<<< HEAD
+=======
+import com.qa.opencart.factory.DriverFactory;
+>>>>>>> 3f3b5208ea33332ed5ab827393f13f6e2d30704c
 
 /**
  * 
@@ -30,9 +34,17 @@ import com.qa.opencart.exceptions.ElementException;
 public class ElementUtil {
 
 	private WebDriver driver;
+<<<<<<< HEAD
 
 	public ElementUtil(WebDriver driver) {
 		this.driver = driver;
+=======
+	private JavaScriptUtil jsUtil;
+
+	public ElementUtil(WebDriver driver) {
+		this.driver = driver;
+		jsUtil= new JavaScriptUtil(driver);
+>>>>>>> 3f3b5208ea33332ed5ab827393f13f6e2d30704c
 	}
 
 	private void nullCheck(String value) {
@@ -66,6 +78,13 @@ public class ElementUtil {
 	public WebElement getElement(By locator) {
 		try {
 			WebElement element = driver.findElement(locator);
+<<<<<<< HEAD
+=======
+			//inorder to flas the element
+			if (Boolean.parseBoolean(DriverFactory.highlight)) {
+				jsUtil.flash(element);
+			}
+>>>>>>> 3f3b5208ea33332ed5ab827393f13f6e2d30704c
 			return element;
 		} catch (NoSuchElementException e) {
 			System.out.println("Element is not present on the page..." + locator);
@@ -410,6 +429,7 @@ public class ElementUtil {
 	 */
 	public List<WebElement> waitForVisibilityOfElemenetsLocated(By locator, int timeOut) {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeOut));
+<<<<<<< HEAD
 		try
 		{
 			return wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(locator));
@@ -419,6 +439,14 @@ public class ElementUtil {
 		}
 		
 		
+=======
+		try {
+			return wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(locator));
+		} catch (Exception e) {
+			return List.of();
+		}
+
+>>>>>>> 3f3b5208ea33332ed5ab827393f13f6e2d30704c
 	}
 
 	/**
@@ -483,7 +511,11 @@ public class ElementUtil {
 			System.out.println("URL not found");
 		}
 		return driver.getCurrentUrl();
+<<<<<<< HEAD
 		
+=======
+
+>>>>>>> 3f3b5208ea33332ed5ab827393f13f6e2d30704c
 	}
 
 	public Alert waitForJSAlert(int timeOut) {
